@@ -12,7 +12,7 @@ from datasets import load_dataset # huggingface datasets
 num_proc = 8
 
 # takes 54GB in huggingface .cache dir, about 8M documents (8,013,769)
-dataset = load_dataset("openwebtext", cache_dir="/tiger/u/hliu99/nanoGPT/cache")
+dataset = load_dataset("openwebtext", cache_dir="/private/home/adefazio/data/cache")
 
 # owt by default only contains the 'train' split, so create a test split
 split_dataset = dataset["train"].train_test_split(test_size=0.0005, seed=2357, shuffle=True)
